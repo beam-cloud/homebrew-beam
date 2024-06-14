@@ -1,6 +1,7 @@
 import argparse
 import hashlib
 import json
+import os
 import shlex
 import subprocess
 from pathlib import Path
@@ -45,7 +46,7 @@ end
 
 def fetch_release_details(tag: str, repo: str, field="assets") -> List[Dict[str, Any]]:
     cmd = f"gh release view {tag} --repo={repo} --json={field}"
-    process = subprocess.run(shlex.split(cmd), capture_output=True)
+    process = subprocess.run(shlex.split(cmd), capture_output=True, env=os.environ)
     if process.returncode != 0 or process.stderr.decode() != "":
         raise subprocess.SubprocessError(process.stderr.decode())
 
@@ -57,7 +58,7 @@ def fetch_release_assets(
     tag: str, repo: str, dir: str = "assets", pattern="*.tar.gz"
 ) -> Dict[str, Path]:
     cmd = f"gh release download {tag} --repo={repo} --dir={dir} --pattern={pattern} --clobber"
-    process = subprocess.run(shlex.split(cmd), capture_output=True)
+    process = subprocess.run(shlex.split(cmd), capture_output=True, env=os.environ)
     if process.returncode != 0 or process.stderr.decode() != "":
         raise subprocess.SubprocessError(process.stderr.decode())
 
