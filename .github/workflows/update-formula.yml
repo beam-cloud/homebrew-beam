@@ -17,7 +17,11 @@ jobs:
 
       - name: Generate formula
         run:
-          python3 bin/formula.py --name ${{ github.event.client_payload.name }} --tag ${{ github.event.client_payload.tag }} --repo ${{ github.event.client_payload.repo }}
+          python3 bin/formula.py \
+            --name ${{ github.event.client_payload.name }} \
+            --version ${{ github.event.client_payload.version }} \
+            --tag ${{ github.event.client_payload.tag }} \
+            --repo ${{ github.event.client_payload.repo }}
 
       - name: Commit changes
         uses: actions-x/commit@v6
