@@ -27,3 +27,7 @@ jobs:
 
       - name: Commit changes
         uses: actions-x/commit@v6
+        with:
+          name: github-actions[bot]
+          email: 41898282+github-actions[bot]@users.noreply.github.com
+          message: Updated formula ${{ github.event.client_payload.name }}
