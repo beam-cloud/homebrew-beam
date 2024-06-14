@@ -16,6 +16,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate formula
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           python3 bin/formula.py \
             --name ${{ github.event.client_payload.name }} \
