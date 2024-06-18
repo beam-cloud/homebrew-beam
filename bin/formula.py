@@ -85,7 +85,7 @@ def update_formula(name: str, version: str, assets: List[Dict[str, Any]]):
         version=version,
     )
 
-    with open(f"Formula/{name}.rb", "w") as f:
+    with open(f"Formula/{name.lower()}.rb", "w") as f:
         f.write(formula)
 
 
