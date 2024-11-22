@@ -6,20 +6,20 @@ class Beta9 < Formula
   desc "The open-source serverless GPU container runtime."
   homepage "https://docs.beam.cloud/v2"
   license "AGPL-3.0"
-  version "0.1.123"
+  version "0.1.124"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/beam-cloud/beta9/releases/download/cli-0.1.123/beta9-0.1.123-darwin-amd64.tar.gz"
-    sha256 "c5ed8c6091f394260dc65eebeafc7f28af32e47380bc337081bf5d75d43b240f"
+    url "https://github.com/beam-cloud/beta9/releases/download/cli-0.1.124/beta9-0.1.124-darwin-amd64.tar.gz"
+    sha256 "f33fa91927cd941bd301fe0b2842b32b60ced583ebb1f00473dbb7eb6569b221"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/beam-cloud/beta9/releases/download/cli-0.1.123/beta9-0.1.123-darwin-arm64.tar.gz"
-    sha256 "3f1afe8cdb358db3eee1a89ba365ffcf9490cf95bb71098fc4d205ee95f87b27"
+    url "https://github.com/beam-cloud/beta9/releases/download/cli-0.1.124/beta9-0.1.124-darwin-arm64.tar.gz"
+    sha256 "f2deab1a6fd20135c552e6091c9726d4f88c28fca20b4ef26b31521edf3882a1"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/beam-cloud/beta9/releases/download/cli-0.1.123/beta9-0.1.123-linux-amd64.tar.gz"
-    sha256 "17d48b654a823e1ed822311f7a4281e49b7e74e58c203ff224ce9adfcb7af210"
+    url "https://github.com/beam-cloud/beta9/releases/download/cli-0.1.124/beta9-0.1.124-linux-amd64.tar.gz"
+    sha256 "364bd88aefd1e133e667c8f03e4e4c19a662f30fef40671b4e306212d3bb405d"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://github.com/beam-cloud/beta9/releases/download/cli-0.1.123/beta9-0.1.123-linux-arm64.tar.gz"
-    sha256 "6fa516aec5e8f7acb7d8e2b4a9a9a848f8f190e7b764586c7077c151138969a4"
+    url "https://github.com/beam-cloud/beta9/releases/download/cli-0.1.124/beta9-0.1.124-linux-arm64.tar.gz"
+    sha256 "f3ebdbc3ff72032112beec39d3f665a8ac5d5f8142992fa90e86f025528564cc"
   else
     odie "Unsupported platform or architecture"
   end
