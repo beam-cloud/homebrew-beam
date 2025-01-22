@@ -6,20 +6,20 @@ class Beam < Formula
   desc "The open-source serverless GPU container runtime."
   homepage "https://docs.beam.cloud/v2"
   license "AGPL-3.0"
-  version "0.2.114"
+  version "0.2.131"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/beam-cloud/beam-client/releases/download/cli-0.2.114/beam-0.2.114-darwin-amd64.tar.gz"
-    sha256 "dca9e2180da9d7d58e19ba0c9fbbba0aaaa195c629203f018b3d4dc80913c466"
+    url "https://github.com/beam-cloud/beam-client/releases/download/cli-0.2.131/beam-0.2.131-darwin-amd64.tar.gz"
+    sha256 "42123f9adfeaca3ad3d8202ba24c2f526d5a35fd580c7e0a95b7f79628741c5d"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/beam-cloud/beam-client/releases/download/cli-0.2.114/beam-0.2.114-darwin-arm64.tar.gz"
-    sha256 "fc01fd23f4b65f4d25c6d317699531cbe7584c43f851fba2d21c06af910d2fbe"
+    url "https://github.com/beam-cloud/beam-client/releases/download/cli-0.2.131/beam-0.2.131-darwin-arm64.tar.gz"
+    sha256 "8a0919d08904f034ebb695aac17c375b36957eecc60d75e023bca1a2ef1cfc49"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/beam-cloud/beam-client/releases/download/cli-0.2.114/beam-0.2.114-linux-amd64.tar.gz"
-    sha256 "88d7223ceae96ca4915e0ee20ea8d940105ed572500210ed2e8774f50e464763"
+    url "https://github.com/beam-cloud/beam-client/releases/download/cli-0.2.131/beam-0.2.131-linux-amd64.tar.gz"
+    sha256 "ab89be7e1b11e0faa531187d7283fde6fad06439754b1a7fb642f38524d3da2c"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://github.com/beam-cloud/beam-client/releases/download/cli-0.2.114/beam-0.2.114-linux-arm64.tar.gz"
-    sha256 "2b8096c43bbf009c0e63d80859331f3aea13f805b3fb62dcb6b51f43874b0ff6"
+    url "https://github.com/beam-cloud/beam-client/releases/download/cli-0.2.131/beam-0.2.131-linux-arm64.tar.gz"
+    sha256 "52ffbe83fc7f1c9be29388323e63aa040358ab897b828806e21fb7905e40f4ce"
   else
     odie "Unsupported platform or architecture"
   end
